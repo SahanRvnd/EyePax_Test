@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19162" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dh9-3C-m2C">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19144"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Tab BarVC-->
+        <scene sceneID="YbJ-YS-pOt">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NjK-6m-erN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <tabBarController storyboardIdentifier="TabBarVC" id="dh9-3C-m2C" customClass="TabBarVC" customModule="SahanRavindu" customModuleProvider="target" sceneMemberID="viewController">
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rKc-PG-MPj">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="selectedImageTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="nT8-2M-zsk" kind="relationship" relationship="viewControllers" id="70L-I9-f1R"/>
+                        <segue destination="Mtm-WL-EhM" kind="relationship" relationship="viewControllers" id="SLn-Ma-JU9"/>
+                        <segue destination="VxT-Bg-gP3" kind="relationship" relationship="viewControllers" id="yyd-Wu-VfW"/>
+                    </connections>
+                </tabBarController>
+            </objects>
+            <point key="canvasLocation" x="-205" y="118"/>
+        </scene>
+        <!--ProfileVC-->
+        <scene sceneID="toM-gh-RJg">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="ProfileVC" storyboardName="Main" referencedIdentifier="ProfileVC" id="POO-Wq-MtQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="k7w-tc-QRZ"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="2BJ-vH-VyH" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="1440"/>
+        </scene>
+        <!--MainVC-->
+        <scene sceneID="Z8s-CG-ckT">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="MainVC" storyboardName="Main" referencedIdentifier="MainVC" id="1NB-rh-zW1" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="b8M-ln-fDy"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xr0-ra-qSP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1084" y="1440"/>
+        </scene>
+        <!--FavoriteVC-->
+        <scene sceneID="GB5-1h-aZ5">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="FavoriteVC" storyboardName="Main" referencedIdentifier="FavoriteVC" id="OUr-oa-WBQ" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="inZ-em-STE"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="97T-KW-hOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="1440"/>
+        </scene>
+        <!--Favorite-->
+        <scene sceneID="7a6-Mi-OGp">
+            <objects>
+                <navigationController storyboardIdentifier="FavouriteNC" automaticallyAdjustsScrollViewInsets="NO" id="Mtm-WL-EhM" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Favorite" image="Favorite" selectedImage="Favorite_active" id="I7e-hi-iJj"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="U3f-uM-vAO">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="OUr-oa-WBQ" kind="relationship" relationship="rootViewController" id="8qe-yW-edm"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="kHn-KI-K85" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-206" y="968"/>
+        </scene>
+        <!--Home-->
+        <scene sceneID="rLz-lt-gDJ">
+            <objects>
+                <navigationController storyboardIdentifier="MainNC" automaticallyAdjustsScrollViewInsets="NO" id="nT8-2M-zsk" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Home" image="Home" selectedImage="Home_active" id="3Wp-FZ-IgS"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="AJf-la-2ur">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="1NB-rh-zW1" kind="relationship" relationship="rootViewController" id="G9X-tT-qeY"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fr3-Sc-YT7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1084" y="968"/>
+        </scene>
+        <!--Profile-->
+        <scene sceneID="AF6-j5-IZx">
+            <objects>
+                <navigationController storyboardIdentifier="ProfileNC" automaticallyAdjustsScrollViewInsets="NO" id="VxT-Bg-gP3" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Profile" image="Profile" selectedImage="Profile_active" id="CAj-h0-7mG"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="QJS-2h-wkp">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="POO-Wq-MtQ" kind="relationship" relationship="rootViewController" id="dXV-CN-gJ8"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="lvG-TB-dBM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="670" y="968"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Favorite" width="20" height="18.5"/>
+        <image name="Favorite_active" width="24" height="24"/>
+        <image name="Home" width="21" height="20"/>
+        <image name="Home_active" width="36" height="36"/>
+        <image name="Profile" width="24" height="24"/>
+        <image name="Profile_active" width="20" height="20"/>
+    </resources>
+</document>

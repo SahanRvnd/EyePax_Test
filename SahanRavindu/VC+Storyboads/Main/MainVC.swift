@@ -9,8 +9,7 @@ import UIKit
 import RxCocoa
 import RxSwift
 
-class MainVC: UIViewController {
-    
+class MainVC: BaseVC {
     @IBOutlet weak var btnNext: UIButton!
     
     let bag = DisposeBag()
@@ -24,13 +23,13 @@ class MainVC: UIViewController {
 
     func addObservers() {
         btnNext.rx.tap.subscribe(onNext: { [weak self] _ in
-            self?.navigate()
+//            self?.navigate()
         }).disposed(by: bag)
     }
-    
-    func navigate() {
-        ApplicationServiceProvider.shared.pushToViewController(in: .Main, for: .AuthNC, from: self)
-    }
 
+    @IBAction func didClickLogOut(_ sender: Any) {
+        
+        logout()
+    }
 }
 

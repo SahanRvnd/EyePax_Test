@@ -1,33 +1,20 @@
 //
-//  SignInVC.swift
+//  TabBarVC.swift
 //  SahanRavindu
 //
-//  Created by Sahan Ravindu on 2021-01-31.
+//  Created by Sahan Ravindu on 2022-05-21.
 //
 
 import UIKit
 
-class SignUpVC: UIViewController {
+class TabBarVC: UITabBarController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        getMovies()
+
         // Do any additional setup after loading the view.
     }
     
-    
-    func getMovies() {
-        
-        APIClient.getMovies(page: 1, completion: { (result) in
-            switch result {
-            case .success(let responseModel):
-                print(true, responseModel.results)
-            case .failure(let error):
-                print(false, "Registration failed \(error.localizedDescription)")
-            }
-            
-        })
-    }
 
     /*
     // MARK: - Navigation

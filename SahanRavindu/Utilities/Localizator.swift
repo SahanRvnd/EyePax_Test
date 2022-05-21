@@ -131,52 +131,18 @@ extension String {
     
     //MARK: ViewControllers
     //Auth
-    static let SocialMediaVC = NSLocalizedString("SocialMediaVC", comment: "")
-    static let LoginVC = NSLocalizedString("LoginVC", comment: "")
-    static let MobileAddingVC = NSLocalizedString("MobileAddingVC", comment: "")
-    static let LanguageVC = NSLocalizedString("LanguageVC", comment: "")
+    static let SignInVC = NSLocalizedString("SignInVC", comment: "")
     static let SignUpVC = NSLocalizedString("SignUpVC", comment: "")
-    static let GetingOtpVC = NSLocalizedString("GetingOtpVC", comment: "")
-    static let VerifyOTPVC = NSLocalizedString("VerifyOTPVC", comment: "")
-    static let ResetPasswordVC = NSLocalizedString("ResetPasswordVC", comment: "")
-    static let ResetPasswordSuccessVC = NSLocalizedString("ResetPasswordSuccessVC", comment: "")
-    
-    //Home
-    //Music
-    static let MainMusicHomeVC = NSLocalizedString("MainMusicHomeVC", comment: "")
-    static let AudioPlayerVC = NSLocalizedString("AudioPlayerVC", comment: "")
-    //Video
-    static let EpisodesVC = NSLocalizedString("EpisodesVC", comment: "")
-    static let VideoPlayerVC = NSLocalizedString("VideoPlayerVC", comment: "")
-    
-    //Services
-    static let ServiceVC = NSLocalizedString("ServiceVC", comment: "")
-    static let WebViewVC = NSLocalizedString("WebViewVC", comment: "")
-    static let NotificationVC = NSLocalizedString("NotificationVC", comment: "")
-    
-    //Other
+    static let TabBarVC = NSLocalizedString("TabBarVC", comment: "")
     static let MainVC = NSLocalizedString("MainVC", comment: "")
-    static let SubscriptionVC = NSLocalizedString("SubscriptionVC", comment: "")
-    static let ChildModeVC = NSLocalizedString("ChildModeVC", comment: "")
-    static let ContactSupportVC = NSLocalizedString("ContactSupportVC", comment: "")
-    static let SettingVC = NSLocalizedString("SettingVC", comment: "")
-    static let ChatVC = NSLocalizedString("ChatVC", comment: "")
-    
-    //Chat
-    static let SMProfileViewController = NSLocalizedString("SMProfileViewController", comment: "")
     
     //MARK: Navigation Controllers
     // Top viewController of the Storyboard
-    static let SocialMediaNC = NSLocalizedString("SocialMediaNC", comment: "")
     static let AuthNC = NSLocalizedString("AuthNC", comment: "")
-    static let LanguageNC = NSLocalizedString("LanguageNC", comment: "")
-    static let MobileAddingNC = NSLocalizedString("MobileAddingNC", comment: "")
     static let SignUpNC = NSLocalizedString("SignUpNC", comment: "")
-    static let MainVideoNC = NSLocalizedString("MainVideoNC", comment: "")
-    static let MainMusicNC = NSLocalizedString("MainMusicNC", comment: "")
+    static let SignInNC = NSLocalizedString("SignInNC", comment: "")
+    static let TabBarNC = NSLocalizedString("TabBarNC", comment: "")
     static let MainNC = NSLocalizedString("MainNC", comment: "")
-    static let MusicTBC = NSLocalizedString("MusicTBC", comment: "")
-    static let ChatNC = NSLocalizedString("ChatNC", comment: "")
    
     
     // Error messages with API

@@ -10,6 +10,7 @@ import UIKit
 
 enum Storyboard: String {
     case Auth
+    case TabBar
     case Main
 }
 
@@ -30,11 +31,11 @@ class ApplicationServiceProvider {
     
     //MARK: Manage User Direction
     public func manageUserDirection(from vc: UIViewController? = nil, window: UIWindow? = nil) {
-        guard LocalUser.current() != nil else {
-            directToPath(in: .Auth, for: .SignUpNC, from: vc, window: window)
+        guard UserDefaultsManager.getLogedInUser() == true else {
+            directToPath(in: .Auth, for: .SignInNC, from: vc, window: window)
             return
         }
-        // Set access token to SwaggerClientAPI.customHeaders and iBaseSwift AppConstant.customHeaders
+        
         setupAccessToken()
         getRedirectionWithMainInterfaceType(type: ApplicationControl.appMainInterfaceType, window: window)
     }
@@ -43,7 +44,7 @@ class ApplicationServiceProvider {
     func getRedirectionWithMainInterfaceType(type: MainInterfaceType, from vc: UIViewController? = nil, window: UIWindow? = nil) {
         switch type {
         case .Main:
-            directToPath(in: .Main, for: .MainNC, from: vc, window: window)
+            directToPath(in: .TabBar, for: .TabBarVC, from: vc, window: window)
         case .SideMenuNavigations:
            break
         case .TabBarNavigations:
