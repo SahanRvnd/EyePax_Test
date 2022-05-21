@@ -10,7 +10,6 @@
         <!--Tab BarVC-->
         <scene sceneID="YbJ-YS-pOt">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="NjK-6m-erN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <tabBarController storyboardIdentifier="TabBarVC" id="dh9-3C-m2C" customClass="TabBarVC" customModule="SahanRavindu" customModuleProvider="target" sceneMemberID="viewController">
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="rKc-PG-MPj">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="49"/>
@@ -24,6 +23,7 @@
                         <segue destination="VxT-Bg-gP3" kind="relationship" relationship="viewControllers" id="yyd-Wu-VfW"/>
                     </connections>
                 </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NjK-6m-erN" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-205" y="118"/>
         </scene>
@@ -37,10 +37,10 @@
             </objects>
             <point key="canvasLocation" x="670" y="1440"/>
         </scene>
-        <!--MainVC-->
+        <!--HomeVC-->
         <scene sceneID="Z8s-CG-ckT">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="MainVC" storyboardName="Main" referencedIdentifier="MainVC" id="1NB-rh-zW1" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="HomeVC" storyboardName="Main" referencedIdentifier="HomeVC" id="1NB-rh-zW1" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="b8M-ln-fDy"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="xr0-ra-qSP" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -119,7 +119,7 @@
         <image name="Favorite" width="20" height="18.5"/>
         <image name="Favorite_active" width="24" height="24"/>
         <image name="Home" width="21" height="20"/>
-        <image name="Home_active" width="36" height="36"/>
+        <image name="Home_active" width="24" height="24"/>
         <image name="Profile" width="24" height="24"/>
         <image name="Profile_active" width="20" height="20"/>
     </resources>

@@ -15,16 +15,13 @@ protocol APIConfiguration: URLRequestConvertible {
 
 enum APIRouter: APIConfiguration {
     // MARK: - Services
-    case login(username: String, password: String, deviceType: String)
-    case register(username:String, password:String, email: String, gender: String)
-    case popular(page: Int)
+    case headlines(country: String, category: String, q: String, perpage: Int, page: Int)
+    case everything(q: String, from: String, to: String, sortBy: String, perpage: Int, page: Int)
     
     // MARK: - HTTPMethod
     var method: HTTPMethod {
         switch self {
-        case .login, .register:
-            return .post
-        case .popular:
+        case .headlines, .everything:
             return .get
         
         }
@@ -33,23 +30,19 @@ enum APIRouter: APIConfiguration {
     // MARK: - Path
     var path: String {
         switch self {
-        case .login:
-            return "/login"
-        case .register:
-            return "/create_account"
-        case .popular(page: let page):
-            return "/popular?api_key=\("21cf9e58fa9fb18d1769658101c2fa34")&page=\(page)"
+        case .headlines(let country, let category, let q, let perpage, let page):
+            return "top-headlines?country=\(country)&category=\(category)&q=\(q)&perpage=\(perpage)&page=\(page)"
+        case .everything(let q, let from, let to, let sortBy, let perpage, let page):
+            return "everything?q=\(q)&from=\(from)&to=\(to)&sortBy=\(sortBy)&perpage=\(perpage)&page=\(page)"
         }
     }
     
     // MARK: - Parameters
     var parameters: Parameters? {
         switch self {
-        case .login(let username, let password, let deviceType) :
-            return ["":""]
-        case .register(let username, let password, let email, let gender):
-            return ["":""]
-        case .popular:
+        case .headlines:
+            return nil
+        case .everything:
             return nil
         
         }
@@ -57,7 +50,7 @@ enum APIRouter: APIConfiguration {
     
     // MARK: - URLRequestConvertible
     func asURLRequest() throws -> URLRequest {
-        let urlString = (KConstant.getBaseURL() + path).addingPercentEncoding(withAllowedCharacters : CharacterSet.urlQueryAllowed) ?? path
+        let urlString = (KConstant.getBaseURL() + path + "&apiKey=85c86f96415b4d8eab35044aa4d2e239").addingPercentEncoding(withAllowedCharacters : CharacterSet.urlQueryAllowed) ?? path
         let url = try urlString.asURL()
         var urlRequest = URLRequest(url: url) //.appendingPathComponent(path))
         
@@ -66,8 +59,6 @@ enum APIRouter: APIConfiguration {
         
         // Common Headers
         urlRequest.setValue(KConstant.ContentType.json.rawValue, forHTTPHeaderField: KConstant.HTTPHeaderField.acceptType.rawValue)
-//        urlRequest.setValue(ContentType.json.rawValue, forHTTPHeaderField: HTTPHeaderField.contentType.rawValue)
-//        urlRequest.setValue("Bearer \(K.APIKey)", forHTTPHeaderField: HTTPHeaderField.authorization.rawValue)
         
         // Parameters
         if let parameters = parameters {
@@ -91,3 +82,5 @@ enum APIRouter: APIConfiguration {
         print("**** PARAMETERS:- \(parameters ?? [:])")
     }
 }
+
+//+ Configuration.API.apiKey

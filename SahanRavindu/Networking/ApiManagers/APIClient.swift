@@ -15,12 +15,15 @@ struct MultipartData {
 }
 
 class APIClient {
+    
+    static let shared = APIClient()
+    
     @discardableResult
-    private static func performRequest<T:Decodable>(route: APIRouter, decoder: JSONDecoder = JSONDecoder(), completion:@escaping (Result<T, AFError>)->Void) -> DataRequest {
+    static func performRequest<T:Decodable>(route: APIRouter, decoder: JSONDecoder = JSONDecoder(), completion:@escaping (Result<T, AFError>, Data)->Void) -> DataRequest {
         NetworkActivityIndicatorManager.networkOperationStarted()
         return AF.request(route).responseDecodable(decoder: decoder) { (response: AFDataResponse<T>) in
             NetworkActivityIndicatorManager.networkOperationFinished()
-            completion(response.result)
+            completion(response.result, response.data ?? Data())
         }
     }
     
@@ -45,13 +48,5 @@ class APIClient {
         }
     }
     
-    // Cancel Event
-    static func register(parameters: RegisterRequestModel, completion:@escaping (Result<SuccessModel, AFError>)->Void) {
-        performUpload(route: APIRouter.register(username: parameters.username, password: parameters.password, email: parameters.email, gender: parameters.gender), multipartData: parameters.imgData, completion: completion)
-    }
-    
-    static func getMovies(page: Int, completion:@escaping (Result<Welcome, AFError>)->Void) {
-        performRequest(route: APIRouter.popular(page: page), completion: completion)
-    }
     
 }

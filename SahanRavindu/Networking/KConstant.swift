@@ -40,11 +40,11 @@ struct KConstant {
     static func getBaseURL() -> String {
         switch KConstant.appEnvironment {
         case .development:
-            return ""
+            return "https://newsapi.org/v2/"
         case .production:
-            return ""
+            return "https://newsapi.org/v2/"
         case .staging:
-            return ""
+            return "https://newsapi.org/v2/"
         }
     }
     
@@ -75,22 +75,10 @@ struct KConstant {
     
     //MARK: Get API keys
     enum APIKeys {
-        static let RESTful = ""//KConstant.getAPIKey()
+        static let RESTful = Configuration.API.apiKey
         static let google = ""
         
     }
-    
-//    //MARK: Provide API key for current app environment
-//    static func getAPIKey() -> String {
-//        switch KConstant.appEnvironment {
-//        case .development:
-//            return ""
-//        case .staging:
-//            return ""
-//        case .production:
-//            return ""
-//        }
-//    }
     
     enum HTTPHeaderField: String {
         case authorization = "Authorization"
@@ -119,4 +107,9 @@ struct KConstant {
     enum Notification {
         static let NotiName = NSNotification.Name(rawValue: "NotiName")
     }
+    
+    //MARK: Categories
+    static let categories = ["business","entertainment","general","health", "science", "sports", "technology"]
+    static let languages = ["ae","ar","at","au","be","bg","br","ca","ch","cn","co","cu","cz","de","eg","fr","gb","gr","hk","hu","id","ie","il","in","it","jp","kr","lt","lv","ma","mx","my","ng","nl","no","nz","ph","pl","pt","ro","rs","ru","sa","se","sg","si","sk","th","tr","tw","ua","us","ve","za"]
+    static let sortedTyps = ["relevancy", "popularity", "publishedAt"]
 }
