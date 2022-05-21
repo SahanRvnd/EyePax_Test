@@ -1,19 +1,19 @@
 //
-//  ViewController.swift
+//  AuthVC.swift
 //  SahanRavindu
 //
-//  Created by Sahan Ravindu on 2022-05-21.
+//  Created by Sahan Ravindu on 2021-01-29.
 //
 
 import UIKit
 
-class ViewController: UIViewController {
+class AuthVC: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+
         // Do any additional setup after loading the view.
     }
-
+    
 
 }
-
