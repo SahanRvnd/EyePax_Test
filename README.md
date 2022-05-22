@@ -1,6 +1,6 @@
 # EyePax_Test
 
-# New Feed app
+# News Feed app
 
 * Build and install the application
 * Create new account
