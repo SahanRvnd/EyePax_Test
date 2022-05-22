@@ -66,7 +66,7 @@ extension UIView {
         return snapshotImageFromMyView!
     }
     
-    func applyGradient(isTopBottom: Bool, colorArray: [UIColor]) {
+    func applyGradient(isTopBottom: Bool, colorArray: [UIColor], cornerRadious: CGFloat = 0) {
         if let sublayers = layer.sublayers {
             let _ = sublayers.filter({ $0 is CAGradientLayer }).map({ $0.removeFromSuperlayer() })
         }
@@ -83,6 +83,7 @@ extension UIView {
         
         backgroundColor = .clear
         gradientLayer.frame = self.bounds
+        gradientLayer.cornerRadius = cornerRadious
         layer.insertSublayer(gradientLayer, at: 0)
     }
     
@@ -112,5 +113,18 @@ extension UITextField {
             string: placeholder,
             attributes: [NSAttributedString.Key.foregroundColor: color]
         )
+    }
+}
+
+extension String {
+    func convertDateTimeToDate(format: String = "yyyy-MM-dd")-> String {
+        let dateFormatter = DateFormatter()
+        let tempLocale = dateFormatter.locale // save locale temporarily
+        dateFormatter.locale = Locale(identifier: "en_US_POSIX") // set locale to reliable US_POSIX
+        dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+        let date = dateFormatter.date(from: self)!
+        dateFormatter.dateFormat = format
+        dateFormatter.locale = tempLocale // reset the locale
+        return dateFormatter.string(from: date)
     }
 }

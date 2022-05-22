@@ -22,6 +22,7 @@ class SignUpVC: BaseVC {
         super.viewDidLoad()
         setupUI()
         setDelegates()
+        self.view.endEditing(true)
     }
     
     override func viewWillAppear(_ animated: Bool) {

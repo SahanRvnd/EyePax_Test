@@ -23,9 +23,11 @@ class SignInVM: BaseVM {
     func signIn(completion: @escaping ActionHandler) {
         if LocalUser.current()?.fullName != localUser?.fullName {
             completion(false, "User cannot be found or invalid user")
-        } else {
+        } else if  LocalUser.current()?.fullName == localUser?.fullName && LocalUser.current()?.accessToken == localUser?.accessToken {
             UserDefaultsManager.setLogedInUser(true)
             completion(true, "")
+        } else {
+            completion(false, "Invalid credentials")
         }
     }
     

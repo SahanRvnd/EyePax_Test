@@ -64,12 +64,21 @@ class ApplicationServiceProvider {
     
     
     //MARK: Navigation push view Controller
-    public func pushToViewController(in sb: Storyboard, for identifier: String, from vc: UIViewController?, data: Any? = nil) {
+    public func pushToViewController(in sb: Storyboard, for identifier: String, from vc: UIViewController?, data: Any? = nil, animation: Bool = true) {
         
         let storyboard = UIStoryboard(name: sb.rawValue, bundle: nil)
         let destVc = storyboard.instantiateViewController(withIdentifier: identifier)
         
-        vc?.navigationController?.pushViewController(destVc, animated: true)
+        if destVc is DetailVC && data != nil {
+            var _vc = storyboard.instantiateViewController(withIdentifier: identifier) as! DetailVC
+            if let _data = data as? DetailVM {
+                _vc.vm = _data
+            }
+            vc?.navigationController?.pushViewController(_vc, animated: animation)
+        }
+        else {
+            vc?.navigationController?.pushViewController(destVc, animated: animation)
+        }
         
     }
     

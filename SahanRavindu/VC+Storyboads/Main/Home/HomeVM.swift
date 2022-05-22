@@ -15,13 +15,14 @@ class HomeVM: BaseVM {
     var newsItems: [NewsItem] = []
     var headline: News?
     var everything: News?
+    var remender: Int = 0
     
-    var titleHeader = NewsItem(title: ["Latest News"], news: [])
-    var cateoryHeader = NewsItem(title: [], news: [])
+    var titleHeader = NewsItem(title: ["Latest News"], news: [], section: "0")
+    var cateoryHeader = NewsItem(title: [], news: [], section: "1")
     
     var selectedCategory: String = ""
     
-    
+    var q: String = ""
     
 }
 
@@ -94,11 +95,22 @@ extension HomeVM {
         
     }
     
-    func addNewsList(newsItem: NewsItem) {
+    func addNewsList(newsItem: NewsItem, isLoardMore: Bool = false) {
         
-        print("Item Count \(newsItem.title)")
-        newsItems.append(newsItem)
-        if newsItems.count ?? 0 > 0 {
+        if newsItems.count > 1 {
+            guard let index = newsItems.firstIndex(where: {$0.section == newsItem.section}) else { return }
+            newsItems.remove(at: index)
+            newsItems.append(newsItem)
+        } else {
+            newsItems.append(newsItem)
+        }
+        
+        if newsItems.count > 1 {
+            guard let index = newsItems.firstIndex(where: {$0.section == "0"}) else { return }
+            if index != 0 {
+                let item = newsItems.remove(at: index)
+                newsItems.insert(item, at: 0)
+            }
         }
     }
     

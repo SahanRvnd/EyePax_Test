@@ -8,6 +8,8 @@
 import UIKit
 
 class BaseVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
+    
+    var activityView: UIActivityIndicatorView?
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -54,5 +56,38 @@ class BaseVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
         tblView.contentInset = UIEdgeInsets(top: -dummyViewHeight, left: 0, bottom: 0, right: 0)
         tblView.backgroundColor = .clear
     }
+    
+    func goBack(animation: Bool = true) {
+        navigationController?.popViewController(animated: animation)
+    }
 
+}
+
+extension BaseVC {
+    func showActivityIndicator() {
+        
+        if #available(iOS 13.0, *) {
+            activityView = UIActivityIndicatorView(style: .large)
+        } else {
+            // Fallback on earlier versions
+        }
+        activityView?.center = self.view.center
+        activityView?.tag    = 102
+        activityView?.color  = .red
+        
+        self.view.addSubview(activityView ?? UIActivityIndicatorView())
+        activityView?.startAnimating()
+    }
+    
+    func hideActivityIndicator(){
+        if (activityView != nil){
+            activityView?.stopAnimating()
+            for view in self.view.subviews {
+                if view.tag == 102 {
+                    view.removeFromSuperview()
+                }
+            }
+        }
+    }
+    
 }

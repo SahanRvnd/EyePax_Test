@@ -11,4 +11,5 @@ import Foundation
 struct NewsItem: Codable {
     var title: [String]?
     var news: [Article]?
+    var section: String?
 }

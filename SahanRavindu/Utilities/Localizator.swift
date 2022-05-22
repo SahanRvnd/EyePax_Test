@@ -135,6 +135,7 @@ extension String {
     static let SignUpVC = NSLocalizedString("SignUpVC", comment: "")
     static let TabBarVC = NSLocalizedString("TabBarVC", comment: "")
     static let HomeVC = NSLocalizedString("HomeVC", comment: "")
+    static let DetailVC = NSLocalizedString("DetailVC", comment: "")
     
     //MARK: Navigation Controllers
     // Top viewController of the Storyboard
