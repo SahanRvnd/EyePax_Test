@@ -1,19 +1,79 @@
 //
-//  HeaderCategoryView.swift
+//  FilterOptionVCViewController.swift
 //  SahanRavindu
 //
-//  Created by Sahan Ravindu on 2022-05-21.
+//  Created by Sahan Ravindu on 2022-05-22.
 //
 
 import UIKit
-import SwiftUI
 
-class HeaderCategoryView: UIView {
+class FilterOptionVC: BaseVC {
     
     //MARK: Outlets
+    @IBOutlet weak var tableView: UITableView!
+    
+//    MARK: Variables
+    let vm = FilterOptionVM()
+    var language: String = ""
+    var sortType: String = ""
+    
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        setUpUI()
+        setDelagates()
+        // Do any additional setup after loading the view.
+    }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+    }
+    
+    func setUpUI() {
+        let language = FilterOptionData(title: "Language", itemList: KConstant.languages)
+        let sortby = FilterOptionData(title: "Sort By", itemList: KConstant.sortedTyps)
+        vm.filterOptions = [sortby, language]
+        
+    }
+
+    func setDelagates() {
+        tableView.delegate = self
+        tableView.dataSource = self
+    }
+
+}
+
+extension FilterOptionVC: UITableViewDelegate, UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return vm.filterOptions?.count ?? 0
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if let cell = tableView.dequeueReusableCell(withIdentifier: "FilterOptionTblCell", for: indexPath) as? FilterOptionTblCell {
+            if let _filter = vm.filterOptions?[indexPath.row] {
+            cell.cellFonfiguration(with: _filter)
+            }
+            return cell
+        }
+        
+        return UITableViewCell()
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 82
+    }
+    
+    
+}
+
+class FilterOptionTblCell: UITableViewCell {
+    
+//    MARK: Outlets
+    @IBOutlet weak var sortTypeLB: UILabel!
     @IBOutlet weak var collectionView: UICollectionView!
     
-    //MARK: Variable
+    //MARK: Variables
     let sliderSectionInsets     = UIEdgeInsets(top: 0.0, left: 0.0, bottom: 0.0, right: 0.0)
     let categoryCell            = "CategoryCell"
     let filterCell              = "FilterCLCell"
@@ -31,6 +91,10 @@ class HeaderCategoryView: UIView {
         setupUI()
     }
     
+    override func prepareForReuse() {
+        
+    }
+    
     override func layoutSubviews() {
         super.layoutSubviews()
         self.layoutIfNeeded()
@@ -43,16 +107,14 @@ class HeaderCategoryView: UIView {
         collectionView.register(UINib(nibName: filterCell, bundle: .main), forCellWithReuseIdentifier: filterCell)
     }
     
-    func configureHeader(with model: [String], selected: String) {
-        categoryList.append(contentsOf: model)
-        select = selected
+    func cellFonfiguration(with model: FilterOptionData) {
+        sortTypeLB.text = model.title ?? ""
+        categoryList = model.itemList ?? []
         self.layoutIfNeeded()
     }
-    
-    
 }
 
-extension HeaderCategoryView: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
+extension FilterOptionTblCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         switch collectionView {

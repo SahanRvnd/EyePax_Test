@@ -39,6 +39,9 @@
                                             </constraints>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" title=" "/>
+                                            <connections>
+                                                <action selector="didClickSeeAll:" destination="iN0-l3-epB" eventType="touchUpInside" id="1Po-mV-s17"/>
+                                            </connections>
                                         </button>
                                     </subviews>
                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -70,7 +73,6 @@
             <nil key="simulatedBottomBarMetrics"/>
             <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
             <connections>
-                <outlet property="didClickSeeAll" destination="5yB-SL-PUt" id="Htq-cr-N9m"/>
                 <outlet property="titleStack" destination="jpC-Yc-og0" id="1bT-U5-SPY"/>
             </connections>
             <point key="canvasLocation" x="410.39999999999998" y="-94.002998500749626"/>

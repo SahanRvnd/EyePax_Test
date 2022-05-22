@@ -30,7 +30,7 @@ class HomeVC: BaseVC {
         setupUI()
         setDelegate()
         registerCells()
-//        fetchData()
+        fetchData()
         addPullToRefreshToScrollView()
     }
     

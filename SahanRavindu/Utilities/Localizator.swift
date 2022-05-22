@@ -134,16 +134,19 @@ extension String {
     static let SignInVC = NSLocalizedString("SignInVC", comment: "")
     static let SignUpVC = NSLocalizedString("SignUpVC", comment: "")
     static let TabBarVC = NSLocalizedString("TabBarVC", comment: "")
-    static let HomeVC = NSLocalizedString("HomeVC", comment: "")
+    static let HomeVC   = NSLocalizedString("HomeVC", comment: "")
     static let DetailVC = NSLocalizedString("DetailVC", comment: "")
+    static let FilterVC = NSLocalizedString("FilterVC", comment: "")
+    static let FilterOptionVC = NSLocalizedString("FilterOptionVC", comment: "")
+    static let SeaAllVC = NSLocalizedString("SeaAllVC", comment: "")
     
     //MARK: Navigation Controllers
     // Top viewController of the Storyboard
-    static let AuthNC = NSLocalizedString("AuthNC", comment: "")
+    static let AuthNC   = NSLocalizedString("AuthNC", comment: "")
     static let SignUpNC = NSLocalizedString("SignUpNC", comment: "")
     static let SignInNC = NSLocalizedString("SignInNC", comment: "")
     static let TabBarNC = NSLocalizedString("TabBarNC", comment: "")
-    static let MainNC = NSLocalizedString("MainNC", comment: "")
+    static let MainNC   = NSLocalizedString("MainNC", comment: "")
    
     
     // Error messages with API

@@ -72,6 +72,9 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             if self.vm.newsItems[section].section == "0" {
                 let header = Bundle.main.loadNibNamed(titleHeader, owner: self.view, options: nil)?.first as! NewsHeaderView
                 header.configureHeader(with: headerItem ?? [])
+                header.cellTap = { [weak self] in
+                    self?.filterView()
+                }
                 return header
             } else {
                 let header = Bundle.main.loadNibNamed(headerCtegoryView, owner: self.view, options: nil)?.first as! HeaderCategoryView
@@ -134,9 +137,6 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
         let offsetY = scrollView.contentOffset.y
         let contentHeight = scrollView.contentSize.height
         let shouldRequestForRemaingEpisodes = offsetY > contentHeight - scrollView.frame.size.height
-        //        !(vm.episodeList.last?.name?.contains("Trailer") ?? false) && offsetY > contentHeight - scrollView.frame.size.height && !(vm.episodeList.last?.name?.contains("01") ?? false)
-        
-        //        if !vm.isYouTube {
         if shouldLoadMore() && shouldRequestForRemaingEpisodes {
             vm.everithingPage = vm.everithingPage + 1
             getEverything(isLoardMore: true, country: "us", category: vm.selectedCategory, q: vm.q, perpage: 20, page: vm.everithingPage)
@@ -154,5 +154,9 @@ extension HomeVC: UITableViewDelegate, UITableViewDataSource {
             }
         }
         return false
+    }
+    
+    func filterView() {
+        ApplicationServiceProvider.shared.pushToViewController(in: .Main, for: .SeaAllVC, from: self, data: vm)
     }
 }

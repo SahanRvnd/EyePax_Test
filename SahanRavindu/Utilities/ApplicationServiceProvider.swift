@@ -75,6 +75,12 @@ class ApplicationServiceProvider {
                 _vc.vm = _data
             }
             vc?.navigationController?.pushViewController(_vc, animated: animation)
+        } else if destVc is SeaAllVC && data != nil {
+            var _vc = storyboard.instantiateViewController(withIdentifier: identifier) as! SeaAllVC
+            if let _ = data as? HomeVM {
+//                _vc.vm = _data
+            }
+            vc?.navigationController?.pushViewController(_vc, animated: animation)
         }
         else {
             vc?.navigationController?.pushViewController(destVc, animated: animation)

@@ -11,12 +11,17 @@ class NewsHeaderView: UIView {
     
     @IBOutlet weak var titleStack: UIStackView!
     
-    var isList: Bool = false
-    var categoryList: [String] = []
+    var isList                      : Bool = false
+    var categoryList                : [String] = []
+    var cellTap                     : (()->())?
     
     override func awakeFromNib() {
         super.awakeFromNib()
         setupUI()
+    }
+    
+    @IBAction func didClickSeeAll(_ sender: Any) {
+        cellTap?()
     }
     
     func setupUI() {
@@ -32,6 +37,5 @@ class NewsHeaderView: UIView {
         
     }
     
-    @IBOutlet weak var didClickSeeAll: UIButton!
     
 }

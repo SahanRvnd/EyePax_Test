@@ -47,10 +47,10 @@
             </objects>
             <point key="canvasLocation" x="-1084" y="1440"/>
         </scene>
-        <!--FavoriteVC-->
+        <!--FilterVC-->
         <scene sceneID="GB5-1h-aZ5">
             <objects>
-                <viewControllerPlaceholder storyboardIdentifier="FavoriteVC" storyboardName="Main" referencedIdentifier="FavoriteVC" id="OUr-oa-WBQ" sceneMemberID="viewController">
+                <viewControllerPlaceholder storyboardIdentifier="FilterVC" storyboardName="Main" referencedIdentifier="FilterVC" id="OUr-oa-WBQ" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" id="inZ-em-STE"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="97T-KW-hOQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>

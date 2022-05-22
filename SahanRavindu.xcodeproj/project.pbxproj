@@ -65,6 +65,16 @@
 		FB5FC68F28387EE800A45908 /* BaseVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB5FC68E28387EE800A45908 /* BaseVM.swift */; };
 		FB9E5A2A2839E1CD00909E07 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A292839E1CD00909E07 /* ProfileVC.swift */; };
 		FB9E5A2C2839E1D900909E07 /* ProfileVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A2B2839E1D900909E07 /* ProfileVM.swift */; };
+		FB9E5A2F2839E85400909E07 /* FilterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A2E2839E85400909E07 /* FilterVC.swift */; };
+		FB9E5A322839E86D00909E07 /* FilterVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A312839E86D00909E07 /* FilterVM.swift */; };
+		FB9E5A362839F33B00909E07 /* FilterCLCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A342839F33B00909E07 /* FilterCLCell.swift */; };
+		FB9E5A372839F33B00909E07 /* FilterCLCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9E5A352839F33B00909E07 /* FilterCLCell.xib */; };
+		FB9E5A3A2839FACF00909E07 /* FilterOptionVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A392839FACF00909E07 /* FilterOptionVC.swift */; };
+		FB9E5A3C2839FADE00909E07 /* FilterOptionVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A3B2839FADE00909E07 /* FilterOptionVM.swift */; };
+		FB9E5A3F283A0A6300909E07 /* SeaAllVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A3E283A0A6300909E07 /* SeaAllVC.swift */; };
+		FB9E5A41283A0A6F00909E07 /* SeaAllVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A40283A0A6F00909E07 /* SeaAllVM.swift */; };
+		FB9E5A45283A0F8500909E07 /* SeeAllTblCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FB9E5A43283A0F8500909E07 /* SeeAllTblCell.swift */; };
+		FB9E5A46283A0F8500909E07 /* SeeAllTblCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = FB9E5A44283A0F8500909E07 /* SeeAllTblCell.xib */; };
 		FBA480FE25C6E3AA00D0D839 /* Localuser.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA480FD25C6E3AA00D0D839 /* Localuser.swift */; };
 		FBA4813125C6E4DD00D0D839 /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4813025C6E4DD00D0D839 /* RealmService.swift */; };
 		FBA4813725C6E53200D0D839 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FBA4813625C6E53100D0D839 /* User.swift */; };
@@ -164,6 +174,16 @@
 		FB5FC68E28387EE800A45908 /* BaseVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseVM.swift; sourceTree = "<group>"; };
 		FB9E5A292839E1CD00909E07 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = "<group>"; };
 		FB9E5A2B2839E1D900909E07 /* ProfileVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVM.swift; sourceTree = "<group>"; };
+		FB9E5A2E2839E85400909E07 /* FilterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVC.swift; sourceTree = "<group>"; };
+		FB9E5A312839E86D00909E07 /* FilterVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterVM.swift; sourceTree = "<group>"; };
+		FB9E5A342839F33B00909E07 /* FilterCLCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCLCell.swift; sourceTree = "<group>"; };
+		FB9E5A352839F33B00909E07 /* FilterCLCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCLCell.xib; sourceTree = "<group>"; };
+		FB9E5A392839FACF00909E07 /* FilterOptionVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionVC.swift; sourceTree = "<group>"; };
+		FB9E5A3B2839FADE00909E07 /* FilterOptionVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterOptionVM.swift; sourceTree = "<group>"; };
+		FB9E5A3E283A0A6300909E07 /* SeaAllVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaAllVC.swift; sourceTree = "<group>"; };
+		FB9E5A40283A0A6F00909E07 /* SeaAllVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeaAllVM.swift; sourceTree = "<group>"; };
+		FB9E5A43283A0F8500909E07 /* SeeAllTblCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SeeAllTblCell.swift; sourceTree = "<group>"; };
+		FB9E5A44283A0F8500909E07 /* SeeAllTblCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SeeAllTblCell.xib; sourceTree = "<group>"; };
 		FBA480FD25C6E3AA00D0D839 /* Localuser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localuser.swift; sourceTree = "<group>"; };
 		FBA4813025C6E4DD00D0D839 /* RealmService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		FBA4813625C6E53100D0D839 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -518,6 +538,53 @@
 			path = Profile;
 			sourceTree = "<group>";
 		};
+		FB9E5A2D2839E83B00909E07 /* Filter */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E5A332839F31700909E07 /* FilterCLCell */,
+				FB9E5A2E2839E85400909E07 /* FilterVC.swift */,
+				FB9E5A312839E86D00909E07 /* FilterVM.swift */,
+			);
+			path = Filter;
+			sourceTree = "<group>";
+		};
+		FB9E5A332839F31700909E07 /* FilterCLCell */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E5A342839F33B00909E07 /* FilterCLCell.swift */,
+				FB9E5A352839F33B00909E07 /* FilterCLCell.xib */,
+			);
+			path = FilterCLCell;
+			sourceTree = "<group>";
+		};
+		FB9E5A382839FA8B00909E07 /* FilterOption */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E5A392839FACF00909E07 /* FilterOptionVC.swift */,
+				FB9E5A3B2839FADE00909E07 /* FilterOptionVM.swift */,
+			);
+			path = FilterOption;
+			sourceTree = "<group>";
+		};
+		FB9E5A3D283A0A4A00909E07 /* SeaAll */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E5A42283A0F4000909E07 /* SeaAllTblCell */,
+				FB9E5A3E283A0A6300909E07 /* SeaAllVC.swift */,
+				FB9E5A40283A0A6F00909E07 /* SeaAllVM.swift */,
+			);
+			path = SeaAll;
+			sourceTree = "<group>";
+		};
+		FB9E5A42283A0F4000909E07 /* SeaAllTblCell */ = {
+			isa = PBXGroup;
+			children = (
+				FB9E5A43283A0F8500909E07 /* SeeAllTblCell.swift */,
+				FB9E5A44283A0F8500909E07 /* SeeAllTblCell.xib */,
+			);
+			path = SeaAllTblCell;
+			sourceTree = "<group>";
+		};
 		FBA4813525C6E50100D0D839 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -536,6 +603,9 @@
 				FB047BE22838C9F200020A60 /* Home */,
 				FB4AF5772839B9FF0082477C /* Detail */,
 				FB9E5A282839E1B300909E07 /* Profile */,
+				FB9E5A3D283A0A4A00909E07 /* SeaAll */,
+				FB9E5A2D2839E83B00909E07 /* Filter */,
+				FB9E5A382839FA8B00909E07 /* FilterOption */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -666,9 +736,11 @@
 				FB085ABB25C47421002F685D /* Assets.xcassets in Resources */,
 				FB4AF56D28398EEC0082477C /* HeadlineClCell.xib in Resources */,
 				FB4AF57128399A010082477C /* NewsTblCell.xib in Resources */,
+				FB9E5A46283A0F8500909E07 /* SeeAllTblCell.xib in Resources */,
 				FB047BDC2838B29300020A60 /* TabBar.storyboard in Resources */,
 				FB047BF72838E99B00020A60 /* NewsHeaderView.xib in Resources */,
 				FB4AF5762839B13E0082477C /* FontsFree-Net-NewYorkSmallMedium.ttf in Resources */,
+				FB9E5A372839F33B00909E07 /* FilterCLCell.xib in Resources */,
 				FB4AF5752839B13E0082477C /* Nunito-Regular.ttf in Resources */,
 				FB047C0528391D6100020A60 /* CategoryCell.xib in Resources */,
 				FB085AB625C47421002F685D /* Main.storyboard in Resources */,
@@ -821,17 +893,22 @@
 				FB085AB325C47421002F685D /* HomeVC.swift in Sources */,
 				FB4AF56728398E450082477C /* HeadlineTblCell.swift in Sources */,
 				FBA4814B25C6E94A00D0D839 /* SignUpVC.swift in Sources */,
+				FB9E5A3A2839FACF00909E07 /* FilterOptionVC.swift in Sources */,
 				FB4E811725CC57E400FFC958 /* APIClient.swift in Sources */,
 				FB047BFD2839028B00020A60 /* HeaderCategoryView.swift in Sources */,
+				FB9E5A362839F33B00909E07 /* FilterCLCell.swift in Sources */,
 				FB047BF92838F22C00020A60 /* HomeVC+Services.swift in Sources */,
 				FB4E811425CC57E400FFC958 /* NetworkActivityIndicatorManager.swift in Sources */,
 				FB047BF22838E10600020A60 /* HomeVM.swift in Sources */,
 				FB047BD628389F0700020A60 /* Handler.swift in Sources */,
 				FB047BEE2838DB4800020A60 /* NewsApi.swift in Sources */,
 				FB4AF57028399A010082477C /* NewsTblCell.swift in Sources */,
+				FB9E5A3F283A0A6300909E07 /* SeaAllVC.swift in Sources */,
 				FB047BD428389CCD00020A60 /* UserDefaultManager.swift in Sources */,
 				FB4E811E25CC588C00FFC958 /* SuccessModel.swift in Sources */,
+				FB9E5A45283A0F8500909E07 /* SeeAllTblCell.swift in Sources */,
 				FB5FC68F28387EE800A45908 /* BaseVM.swift in Sources */,
+				FB9E5A3C2839FADE00909E07 /* FilterOptionVM.swift in Sources */,
 				FB085AFD25C47659002F685D /* ApplicationServiceProvider.swift in Sources */,
 				FBF51623283810A8009EA617 /* KConstant.swift in Sources */,
 				FB4E811F25CC588C00FFC958 /* RegisterRequestModel.swift in Sources */,
@@ -841,9 +918,12 @@
 				FB085AB925C47421002F685D /* SahanRavindu.xcdatamodeld in Sources */,
 				FB4AF5792839BA1F0082477C /* DetailVC.swift in Sources */,
 				FBA4813125C6E4DD00D0D839 /* RealmService.swift in Sources */,
+				FB9E5A41283A0A6F00909E07 /* SeaAllVM.swift in Sources */,
+				FB9E5A2F2839E85400909E07 /* FilterVC.swift in Sources */,
 				FB9E5A2A2839E1CD00909E07 /* ProfileVC.swift in Sources */,
 				FB5FC68A28387E9A00A45908 /* SignInVC.swift in Sources */,
 				FB4E811525CC57E400FFC958 /* APIRouter.swift in Sources */,
+				FB9E5A322839E86D00909E07 /* FilterVM.swift in Sources */,
 				FBA480FE25C6E3AA00D0D839 /* Localuser.swift in Sources */,
 				FB085AEF25C474E1002F685D /* Localizator.swift in Sources */,
 				FB047BE72838CE3600020A60 /* Configuration.swift in Sources */,

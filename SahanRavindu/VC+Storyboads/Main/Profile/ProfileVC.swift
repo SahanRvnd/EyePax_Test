@@ -9,9 +9,9 @@ import UIKit
 
 class ProfileVC: BaseVC {
 
-    @IBOutlet weak var profileLmgView: UIImageView!
-    @IBOutlet weak var greatingLB: UILabel!
-    @IBOutlet weak var btnLogOut: UIButton!
+    @IBOutlet weak var profileLmgView       : UIImageView!
+    @IBOutlet weak var greatingLB           : UILabel!
+    @IBOutlet weak var btnLogOut            : UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
