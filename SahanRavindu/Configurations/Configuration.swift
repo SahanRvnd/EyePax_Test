@@ -35,6 +35,7 @@ class Configuration {
 extension Configuration {
     struct Keys {
         static let apiKey: String = "API_KEY"
+        static let baseUrl: String = "BASE_URL"
     }
 }
 
@@ -42,6 +43,9 @@ extension Configuration {
     struct API {
         static var apiKey: String {
             return try! Configuration.default.value(for: Configuration.Keys.apiKey)
+        }
+        static var baseUrl: String {
+            return try! Configuration.default.value(for: Configuration.Keys.baseUrl)
         }
     }
 }

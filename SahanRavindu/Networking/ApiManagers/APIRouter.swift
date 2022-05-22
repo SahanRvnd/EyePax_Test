@@ -49,8 +49,9 @@ enum APIRouter: APIConfiguration {
     }
     
     // MARK: - URLRequestConvertible
+//    &apiKey=b82a7b37ea954439aa5ee8002aee1a6d"
     func asURLRequest() throws -> URLRequest {
-        let urlString = (KConstant.getBaseURL() + path + "&apiKey=b82a7b37ea954439aa5ee8002aee1a6d").addingPercentEncoding(withAllowedCharacters : CharacterSet.urlQueryAllowed) ?? path
+        let urlString = (KConstant.getBaseURL() + path + "&apiKey=\(Configuration.API.apiKey)").addingPercentEncoding(withAllowedCharacters : CharacterSet.urlQueryAllowed) ?? path
         let url = try urlString.asURL()
         var urlRequest = URLRequest(url: url) //.appendingPathComponent(path))
         

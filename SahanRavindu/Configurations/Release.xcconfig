@@ -8,4 +8,5 @@
 // Configuration settings file format documentation can be found at:
 // https://help.apple.com/xcode/#/dev745c5c974
 
-API_KEY = "85c86f96415b4d8eab35044aa4d2e239";
+API_KEY = 85c86f96415b4d8eab35044aa4d2e239
+BASE_URL = newsapi.org

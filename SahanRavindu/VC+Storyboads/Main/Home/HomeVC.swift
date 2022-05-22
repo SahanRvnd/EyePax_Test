@@ -30,12 +30,17 @@ class HomeVC: BaseVC {
         setupUI()
         setDelegate()
         registerCells()
-        fetchData()
         addPullToRefreshToScrollView()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        fetchData()
     }
     
     @IBAction func didClearSearch(_ sender: Any) {
         if searchTxtView.text == "" {
+            vm.q = ""
             fetchData()
         }
     }

@@ -70,13 +70,13 @@ class ApplicationServiceProvider {
         let destVc = storyboard.instantiateViewController(withIdentifier: identifier)
         
         if destVc is DetailVC && data != nil {
-            var _vc = storyboard.instantiateViewController(withIdentifier: identifier) as! DetailVC
+            let _vc = storyboard.instantiateViewController(withIdentifier: identifier) as! DetailVC
             if let _data = data as? DetailVM {
                 _vc.vm = _data
             }
             vc?.navigationController?.pushViewController(_vc, animated: animation)
         } else if destVc is SeaAllVC && data != nil {
-            var _vc = storyboard.instantiateViewController(withIdentifier: identifier) as! SeaAllVC
+            let _vc = storyboard.instantiateViewController(withIdentifier: identifier) as! SeaAllVC
             if let _ = data as? HomeVM {
 //                _vc.vm = _data
             }

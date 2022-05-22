@@ -30,8 +30,15 @@ class FilterVC: BaseVC {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        fetchData()
+    }
+    
     @IBAction func didClearSearchText(_ sender: Any) {
         if searchTxtView.text == "" {
+            vm.q = ""
             fetchData()
         }
     }

@@ -40,9 +40,9 @@ struct KConstant {
     static func getBaseURL() -> String {
         switch KConstant.appEnvironment {
         case .development:
-            return "https://newsapi.org/v2/"
+            return "https://\(Configuration.API.baseUrl)/v2/"
         case .production:
-            return "https://newsapi.org/v2/"
+            return "https://\(Configuration.API.baseUrl)/v2/"
         case .staging:
             return "https://newsapi.org/v2/"
         }

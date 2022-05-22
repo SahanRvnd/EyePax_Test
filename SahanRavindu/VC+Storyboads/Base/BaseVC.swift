@@ -47,7 +47,7 @@ class BaseVC: UIViewController, UITextFieldDelegate, UITextViewDelegate {
     func logout() {
         UserDefaultsManager.setLogedInUser(false)
             // Direct to login root
-        ApplicationServiceProvider.shared.directToPath(in: .Auth, for: .SignInVC, from: self)
+        ApplicationServiceProvider.shared.directToPath(in: .Auth, for: .SignInNC, from: self)
     }
     
     func setupTableView(with tblView: UITableView) {
